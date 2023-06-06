@@ -7,7 +7,7 @@ PEDIR_CLAVE=1
 DESCIFRAR_TEXTO=2
 DESCIFRAR_TEXTO_CLAVE=3
 PEDIR_CLAVE_DESCIFRAR=4
-h = Hunspell('es_CO','es_CO')
+h = Hunspell('/app/es_CO', '/app/es_CO')
 LETTERS    = "ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚ0123456789,.;:-_+*!¡¿?#$%&/()="
 SIMBOLOS=",.;:-_+*!¡¿?#$%&/()="
 letters="abcdefghijklmnopqrstuvwxyzáéíóú"
