@@ -1,24 +1,13 @@
 from telegram.ext import Updater, CommandHandler, ConversationHandler, MessageHandler, Filters
 from telegram import ChatAction
 from hunspell import Hunspell
-import os
 
 CIFRAR_TEXTO = 0
 PEDIR_CLAVE=1
 DESCIFRAR_TEXTO=2
 DESCIFRAR_TEXTO_CLAVE=3
 PEDIR_CLAVE_DESCIFRAR=4
-# Obtener la ruta absoluta del directorio raíz
-root_directory = os.path.abspath('/')
-
-# Obtener la ruta absoluta del directorio del diccionario
-dictionary_directory = os.path.join(root_directory, 'es_CO')
-
-# Obtener la ruta absoluta del directorio de los archivos de afinidad
-affinity_directory = os.path.join(root_directory, 'es_CO')
-
-# Crear una instancia de Hunspell con las rutas de los directorios
-h = Hunspell(dictionary_directory, affinity_directory)
+h = Hunspell('es_CO', 'es_CO')
 LETTERS    = "ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚ0123456789,.;:-_+*!¡¿?#$%&/()="
 SIMBOLOS=",.;:-_+*!¡¿?#$%&/()="
 letters="abcdefghijklmnopqrstuvwxyzáéíóú"
