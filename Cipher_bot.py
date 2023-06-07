@@ -11,8 +11,8 @@ PEDIR_CLAVE_DESCIFRAR=4
 current_directory = os.path.dirname(os.path.abspath(__file__))
 # Imprimir la ruta del archivo actual
 print("Ruta del archivo actual:", current_directory)
-
-h = Hunspell(str(current_directory,'/es_CO'), str(current_directory,'/es_CO'))
+dir=current_directory+'/es_CO'
+h = Hunspell(dir, dir)
 LETTERS    = "ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚ0123456789,.;:-_+*!¡¿?#$%&/()="
 SIMBOLOS=",.;:-_+*!¡¿?#$%&/()="
 letters="abcdefghijklmnopqrstuvwxyzáéíóú"
