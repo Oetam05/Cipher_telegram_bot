@@ -1,13 +1,18 @@
 from telegram.ext import Updater, CommandHandler, ConversationHandler, MessageHandler, Filters
 from telegram import ChatAction
 from hunspell import Hunspell
+import os
 
 CIFRAR_TEXTO = 0
 PEDIR_CLAVE=1
 DESCIFRAR_TEXTO=2
 DESCIFRAR_TEXTO_CLAVE=3
 PEDIR_CLAVE_DESCIFRAR=4
-h = Hunspell('es_CO', 'es_CO')
+current_directory = os.path.dirname(os.path.abspath(__file__))
+# Imprimir la ruta del archivo actual
+print("Ruta del archivo actual:", current_directory)
+
+h = Hunspell(current_directory,'/es_CO', current_directory,'/es_CO')
 LETTERS    = "ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚ0123456789,.;:-_+*!¡¿?#$%&/()="
 SIMBOLOS=",.;:-_+*!¡¿?#$%&/()="
 letters="abcdefghijklmnopqrstuvwxyzáéíóú"
